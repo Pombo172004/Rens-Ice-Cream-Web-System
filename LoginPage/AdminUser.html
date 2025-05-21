@@ -1,0 +1,42 @@
+
+
+
+<!-- Admin or User choosing Page -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin or User</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    
+        <!-- Right Side of the Login container -->
+        <div class="right-panel">
+            <h1>Who is using?</h1>
+
+            <form onsubmit="return false;"> <!-- Prevent default form submission -->
+                <br><br><br><br>
+            
+                <button type="button" class="ADMINBTN" onclick="redirectToAdmin()">ADMIN</button>
+                <button type="button" class="USERBTN" onclick="redirectToUser()">USER</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function redirectToAdmin() {
+            window.location.href = "../AdminLogin/AdminLogin.php"; // Redirect to Admin login page
+        }
+
+        function redirectToUser() {
+            window.location.href = "../LoginPage/Userlogin.php"; // Redirect to User login page (PHP)
+        }
+    </script>
+</body>
+
+</html>

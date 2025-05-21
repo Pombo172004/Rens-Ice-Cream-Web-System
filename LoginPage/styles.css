@@ -1,0 +1,221 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #e0e7ff 0%, #f3f3f3 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.right-panel {
+    width: 400px;
+    background: linear-gradient(135deg, #4CAF50 0%, #2196F3 100%);
+    color: white;
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+}
+h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: white;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: white;
+}
+.card-body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+input.form-control {
+    width: 100%;
+    max-width: none;
+    margin: 6px 0;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 0.95em;
+    background: #f8f9fa;
+    transition: border 0.2s;
+}
+input.form-control::placeholder {
+    font-size: 0.9em;
+    color: #888;
+}
+input.form-control:focus {
+    border: 1.5px solid #007bff;
+    outline: none;
+    background: #fff;
+    box-shadow: 0 0 6px rgba(123, 47, 242, 0.6);
+}
+button.btn {
+    width: 100%;
+    padding: 8px;
+    background: #4CAF50;
+    color: #222;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+    transition: background 0.2s, color 0.2s;
+}
+button.btn:hover {
+    background: #377739;
+    color: #fff;
+}
+.alert {
+    width: 100%;
+    padding: 6px 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    text-align: center;
+}
+.alert-danger {
+    background: #ffebee;
+    color: #c62828;
+    border: 1px solid #e57373;
+}
+.alert-success {
+    background: #e8f5e9;
+    color: #388e3c;
+    border: 1px solid #81c784;
+}
+.card-body p {
+    margin: 10px 0 0 0;
+    font-size: 0.9em;
+    color: #f3e5f5;
+}
+.card-body a {
+    color: #ffd600;
+    text-decoration: none;
+    font-weight: 500;
+}
+.card-body a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.password-strength {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.password-strength span {
+    width: 30px;
+    height: 5px;
+    background-color: #ccc;
+    border-radius: 5px;
+}
+.ADMINBTN, .USERBTN {
+    background-color: #4CAF50;
+    color: #333;
+    border: none;
+    padding: 12px 24px;
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.ADMINBTN:hover, .USERBTN:hover {
+    background-color: #377739;
+    transform: translateY(-2px);
+}
+.ADMINBTN:active, .USERBTN:active {
+    background-color: #e6b800;
+    transform: translateY(0);
+}
+.sign-in {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+.LOGIN {
+    background-color: #ffcc00;
+    color: black;
+}
+.create-account{
+    background-color: #ffcc00;
+    color: black;
+}
+
+/* Add styles for the container and left panel */
+.container {
+    display: flex; /* Use flexbox for layout */
+    width: 80%; /* Set a max width for the container */
+    max-width: 900px; /* Prevent it from getting too wide */
+    background-color: #fff; /* White background for the container */
+    border-radius: 16px; /* Match border-radius with right-panel */
+    box-shadow: 0 8px 48px rgba(44,62,80,0.15); /* Larger shadow for the container */
+    overflow: hidden; /* Hide any overflowing content */
+}
+
+.left-panel {
+    flex: 1; /* Allow left panel to grow and take available space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); /* A different gradient or a solid color */
+}
+
+.left-panel img {
+    max-width: 100%; /* Ensure image is responsive */
+    height: auto;
+    display: block; /* Remove extra space below the image */
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack panels vertically on smaller screens */
+        width: 95%;
+    }
+    .left-panel {
+        padding: 10px;
+    }
+    .right-panel {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .right-panel {
+        padding: 12px 4vw 10px 4vw;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+    }
+    .btn {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+}
+
+
+
+
+
