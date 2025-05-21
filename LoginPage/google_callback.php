@@ -5,8 +5,8 @@ session_start();
 require '../includes/db.php'; // Assuming you have your database connection here
 
 // Google OAuth2 Configuration
-$clientId = getenv('GOOGLE_CLIENT_ID'); // Read Client ID from environment variable
-$clientSecret = getenv('GOOGLE_CLIENT_SECRET'); // Read Client Secret from environment variable
+$clientId = '593939635447-pl2hb3i8p0qnfan6fplv1is36enc4iao.apps.googleusercontent.com'; // Replace with your actual Client ID
+$clientSecret = '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'; // Replace with your actual Client Secret
 $redirectUri = 'http://localhost/Makmak1/LoginPage/google_callback.php'; // Make sure this matches your Authorized redirect URI
 
 if (isset($_GET['code'])) {
